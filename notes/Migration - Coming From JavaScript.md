@@ -104,7 +104,7 @@ return if (x < 5) {
 Without the `do`, this is a grammar error because it's not a single expression. Without the `return` in the body of the `do`, that logical branch executes but returns `{}` / [[Core - Types#Unit|Unit]], so it is an [[Migration - Coming From JavaScript#Function return types|inconsistent return type]].
 ## Array / List access
 
-Though Madlib has a [[specific Array|Array type]], unless you have a specific need for performance, you're more likely to be working with Lists.
+Though Madlib has a [[Monad - Array type|specific Array type]], unless you have a specific need for performance, you're more likely to be working with Lists.
 
 ```js
 const list = ["a", "b", "c"]

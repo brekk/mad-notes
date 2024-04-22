@@ -1,0 +1,1 @@
+Like other functional programming languages, Madlib attempts to add guide rails to make it harder to represent invalid states. Many operations are made safer by paving over invalid states with features like [[Monad - Maybe Type|Maybes]] so that developers can elide over states which they would then need to recover from.

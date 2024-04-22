@@ -1,0 +1,5 @@
+---
+aliases:
+  - Array type
+  - Array
+---
