@@ -19,11 +19,11 @@ export nth = (i, list) => where(list) {
 
 ## Type Signature
 
-Functions _should_ be preceded with a Hindley-Milner style [[Core - Type Signatures|type signature]]. This isn't _strictly_ required, since the compiler can usually infer correct types without this, but using type signatures will improve the quality and correctness of your code. This is especially true of code which makes use of [[DX - The Fence|The Fence]] or [[DX - Externally linked libraries|externally linked libraries]].
+Functions _should_ be preceded with a Hindley-Milner style [[Core - Type Signatures|type signature]]. This isn't _strictly_ required, since the compiler can usually infer correct types without this, but using type signatures will improve the quality and correctness of your code. This is especially true of code which makes use of [[DX - The Fence|The Fence]] or [[DX - Externally linked libraries|externally linked libraries]], or code which makes use of [[Core - Interfaces#Type Constraints|type constraints]], either in order to be generic or take advantage of an interface.
 
 ## Consistent Return Type
 
-Functions _must_ return a consistent type, e.g. unlike JavaScript, you cannot have a function which returns an integer _or_ a string. If you want to allow for a function to return "different" types, you'll need to wrap that value with an [[Core - Algebraic Data Types|algebraic container type]]. For instance, if you want to model something that could otherwise result in failure, you could use the [[Core - Data Types#Maybe|Maybe]] type to encapsulate and elide over that — using `Nothing` to model failure and `Just` to model success.
+Functions _must_ return a consistent type, e.g. unlike [[Migration - Coming From JavaScript|in JavaScript]], you cannot have a function which returns an integer _or_ a string. If you want to allow for a function to return "different" types, you'll need to wrap that value with an [[Core - Algebraic Data Types|algebraic container type]]. For instance, if you want to model something that could otherwise result in failure, you could use the [[Core - Data Types#Maybe|Maybe]] type to encapsulate and elide over that — using `Nothing` to model failure and `Just` to model success.
 
 ## Construction
 

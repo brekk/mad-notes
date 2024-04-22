@@ -6,7 +6,7 @@
 		{"id":"7eddaa9f479f830f","type":"text","text":"Reference\n\"What is X in Madlib?\"","x":60,"y":-40,"width":280,"height":60,"color":"5"},
 		{"id":"d6e5c0c45687d55d","type":"text","text":"Language Design\n","x":-324,"y":120,"width":250,"height":50,"color":"6"},
 		{"id":"65a107671a4c7d1e","type":"file","file":"Madlib/Language Design - Explicitness.md","x":-810,"y":-40,"width":400,"height":285,"color":"6"},
-		{"id":"b862c6c6db69a21a","type":"file","file":"Madlib/Language Design - Mutation.md","x":-810,"y":330,"width":400,"height":400,"color":"6"},
+		{"id":"b862c6c6db69a21a","type":"file","file":"Madlib/Language Design - Limit Mutation.md","x":-810,"y":330,"width":400,"height":400,"color":"6"},
 		{"id":"afa27c7b84e1c114","type":"file","file":"Madlib/Migration - Coming From JavaScript.md","x":60,"y":-906,"width":400,"height":440,"color":"3"},
 		{"id":"c7face1b22cdca08","type":"text","text":"The Edges","x":-685,"y":-175,"width":150,"height":50,"color":"2"},
 		{"id":"ff305f9c240bf3d3","type":"text","text":"The Basics","x":-225,"y":-346,"width":165,"height":50,"color":"1"},

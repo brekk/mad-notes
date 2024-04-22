@@ -4,7 +4,7 @@ aliases:
 ---
 A type signature is indicated by a double-colon `::` , which can be read as "has type of".
 
-This can be done inline, e.g. `five = (5 :: Byte)` or prior to the implementation of [[Core - Functions|a function]]:
+This can be done inline, e.g. `five = (5 :: Byte)` or prior to a declaration, especially [[Core - Functions|a function]]:
 ```
 times :: Integer -> Integer -> Integer
 export times = (a, b) => a * b 
@@ -28,4 +28,5 @@ export nth = (i, list) => where(list) {
 ```
 
 ## Type Constraints
+In order to make a function work generic
 
