@@ -1,0 +1,7 @@
+import IO from "IO"
+
+
+
+main = () => {
+  IO.putLine("Hello World!")
+}

@@ -1,0 +1,12 @@
+---
+aliases:
+  - Code Targets
+  - iftarget
+---
+- `#iftarget` syntax is used to specify code which is reliant on a specific ecosystem / target.
+- Code _should_ be written to be portable across all-targets by default:
+	- JS / web code uses `#iftarget js`
+	- LLVM code uses `#iftarget llvm`
+	- This may vary based upon intent — but all core Madlib code should have parity across both targets
+- Code which uses [[DX - The Fence|The Fence]] should be written within `#iftarget js`
+- Code which uses [[DX - Externally linked libraries|externally linked libraries]] should be written within `#iftarget llvm`

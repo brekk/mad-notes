@@ -1,0 +1,4 @@
+---
+aliases:
+  - Externally linked libraries
+---
