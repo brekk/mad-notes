@@ -4,6 +4,9 @@ aliases:
   - Just
   - Nothing
   - Maybe Type
+tags:
+  - prelude
+  - reference
 ---
 A Maybe is a tagged union which allows us to elide over cases which are otherwise impossible or illogical; "good" values are wrapped in `Just` and "bad" values are transformed into `Nothing`.
 ## Constructors

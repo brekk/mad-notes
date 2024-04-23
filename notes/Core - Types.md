@@ -1,6 +1,8 @@
 ---
 aliases:
   - Types
+tags:
+  - fundamentals
 ---
 ## Boolean
 Binary values: `true` or `false`

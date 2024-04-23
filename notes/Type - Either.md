@@ -4,6 +4,9 @@ aliases:
   - Left
   - Right
   - Either Type
+tags:
+  - reference
+  - "#prelude"
 ---
 An Either is a tagged union which allows us to elide over cases which are [[Language Design - Make Invalid States Unrepresentable|otherwise impossible or illogical]] while capturing additional information for consumption downstream; success values are wrapped in `Right` and failure values are wrapped in a `Left`. It is similar to the [[Type - Maybe]] type but unlike the `Nothing` constructor the `Left` can be transformed and contains additional info.
 ## Constructors

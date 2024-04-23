@@ -1,6 +1,8 @@
 ---
 aliases:
   - Type Signatures
+tags:
+  - fundamentals
 ---
 A type signature is indicated by a double-colon `::` , which can be read as "has type of".
 

@@ -1,6 +1,9 @@
 ---
 aliases:
   - ADT Tutorial
+tags:
+  - tutorial
+  - fundamentals
 ---
 Algebraic data types are one of the powerful constructs we've borrowed from other functional languages, like Haskell. Using these container types we can model complex domains logically.
 
@@ -55,5 +58,3 @@ findProductInStock = (inventory, name, total) => pipe(
 ```
 
 We can trivially iterate over a list of products and search for one by name, and we can ensure that the requested number of a given product wouldn't result in trying to sell more than we have in stock.
-
-#tutorial

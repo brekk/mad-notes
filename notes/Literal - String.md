@@ -1,0 +1,1 @@
+A [[Type - List|List]] of [[Literal - Char|Characters]] delimited by double quotes `"` or backticks `` ` ``

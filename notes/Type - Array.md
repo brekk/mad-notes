@@ -2,6 +2,9 @@
 aliases:
   - Array type
   - Array
+tags:
+  - reference
+  - prelude
 ---
 Madlib uses [[Type - List|Lists]] as a collection type in most circumstances.
 

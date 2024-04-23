@@ -2,6 +2,9 @@
 aliases:
   - Code Targets
   - iftarget
+tags:
+  - syntax
+  - fundamentals
 ---
 `#iftarget` syntax is used to specify code which is reliant on a specific ecosystem / target.
 

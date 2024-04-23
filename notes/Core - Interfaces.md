@@ -2,6 +2,8 @@
 aliases:
   - Instances
   - Interfaces
+tags:
+  - fundamentals
 ---
 Instances are a means of defining an contract of behavior for all [[Tutorial - Algebraic Data Types|data types]] which implement the contract.
 

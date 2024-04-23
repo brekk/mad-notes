@@ -1,6 +1,8 @@
 ---
 aliases:
   - Functions
+tags:
+  - fundamentals
 ---
 Examples:
 ```

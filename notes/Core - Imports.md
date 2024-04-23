@@ -1,6 +1,8 @@
 ---
 aliases:
   - Imports
+tags:
+  - fundamentals
 ---
 There are two kinds of imports; in the same way that there are [[Core - Type Signatures|type signatures]] and [[Core - Functions#Construction|function implementations]], there are both `type` imports and concrete imports.
 

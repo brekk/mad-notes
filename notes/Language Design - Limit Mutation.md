@@ -1,6 +1,8 @@
 ---
 aliases:
   - Mutation
+tags:
+  - language-design
 ---
 Mutation of stateful values is a common source of errors and ambiguity. Madlib tries to prevent this common footgun by disallowing mutation of top-level values and erroring on unintentional mutation.
 

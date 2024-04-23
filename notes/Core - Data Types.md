@@ -1,6 +1,9 @@
 ---
 aliases:
   - Data Types
+tags:
+  - fundamentals
+  - prelude
 ---
 ## Prelude
 
@@ -67,7 +70,7 @@ str = where (x) {
   Left(error) => "Error: " ++ error
 }
 ```
-(For the purposes of this example we're assuming that this `x` value is of type `Either String String`. Note that if we omitted the `Left` deconstruction above, we would get an [[DX - Warnings|incomplete pattern warning]])
+(For the purposes of this example we're assuming that this `x` value is of type `Either String String`. Note that if we omitted the `Left` deconstruction above, we would get an [[Warnings|incomplete pattern warning]])
 
 ### Implicit deconstruction
 For convenience and composition, a `where` deconstruction without an explicit parameter is treated like a unary function which expects one parameter. Taking the example from above, the following code results in the same behavior:
