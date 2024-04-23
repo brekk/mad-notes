@@ -3,14 +3,28 @@ aliases:
   - Coming From JavaScript
 ---
 For developers coming to Madlib from JavaScript, there are a few notable differences one should be aware of.
-
 ## Variable declaration
 
 There is no specific keyword needed to declare a variable, like `let` or `const` or `var` in JS. Instead all values are declared with the assignment operator, e.g. `x = 5` . However, values cannot be mutated, [[Language Design - Limit Mutation|except in limited circumstances]].
 
+## Copies over Mutation
+
+In Madlib are [[Language Design - Limit Mutation|limited circumstances where values can be mutated]] — by default most functions will instead return a modified copy of the the original value. For instance, `List.append` will yield a new list of values rather than in-place mutation:
+
+```mad
+import List from "List"
+import IO from "IO"
+
+list = ["a", "b", "c"]
+list2 = List.append("d", list)
+IO.pTrace("Note that list is unchanged!", #[list, list2])
+```
+
+**NB**: This doesn't hold for the specialized [[Migration - Coming From JavaScript#Madlib Arrays|Array type]] but it is an outlier in the language.
 ## Strict Equality
 
-Madlib has a single equality operator `==` and the [[Language Design - Explicitness|language itself is strict]], instead of forcing the developer to remember to use a different operator of increased strictness — `===` is not a valid operator and will throw a syntax error.
+Madlib has a single equality operator `==` and the language itself is designed to be [[Language Design - Explicitness|explicit]] where possible. Unlike JS, instead of forcing the developer to remember to use a different operator of increased strictness, `===` is not a valid operator and will throw a syntax error.
+
 ## Conditionals
 
 Conditionals in Madlib are single-expression by default, they have implicit returns, and they must be complete (they cannot short-circuit).
@@ -102,9 +116,10 @@ return if (x < 5) {
 }
 ```
 Without the `do`, this is a grammar error because it's not a single expression. Without the `return` in the body of the `do`, that logical branch executes but returns `{}` / [[Core - Types#Unit|Unit]], so it is an [[Migration - Coming From JavaScript#Function return types|inconsistent return type]].
-## Array / List access
 
-Though Madlib has a [[Monad - Array type|specific Array type]], unless you have a specific need for performance, you're more likely to be working with Lists.
+## Working with Lists
+
+Though Madlib has an [[Monad - Array type|Array type]], unless you have a specific need for performance, you're more likely to be working with Lists.
 
 ```js
 const list = ["a", "b", "c"]
@@ -125,7 +140,7 @@ List.nth(1, list) // Just("b")
 List.nth(7, list) // Nothing
 ```
 
-The above code may feel unwieldy coming from JS, but ultimately this safety helps prevent invalid states.
+The above code may feel unwieldy coming from JS, but ultimately this safety helps [[Language Design - Make Invalid States Unrepresentable|prevent invalid states]].
 
 In order to get the raw value out from a Maybe, you can use `Maybe.fromMaybe` or [[Core - Data Types#Deconstruction|deconstruct the container]] using `where`:
 
@@ -141,7 +156,36 @@ raw = pipe(
 ```
 
 Note that the type passed to `fromMaybe` must [[Migration - Coming From JavaScript#Function return types|be consistent]] with the value being unwrapped here (so in both cases it will return a raw String).
+## Madlib Arrays
 
+Madlib has a specialized [[Monad - Array type|Array type]] which you can use if you have a specific need for performance. (If you're not sure, you _probably_ don't.)
+
+You can create an Array from a List like so:
+```mad
+import Array from "Array"
+
+a = Array.fromList(["a", "b", "c"])
+```
+
+Arrays in Madlib are unusual in that they have operations which mutate them in place, unlike [[Migration - Coming From JavaScript#Copies over Mutation|most functions in Madlib]].
+
+```mad
+import Array from "Array"
+import IO from "IO"
+
+alpha = Array.fromList(["a", "b", "c"])
+Array.push("z", a)
+IO.pTrace("mutant!", alpha)
+```
+
+Additionally, unlike Lists, Arrays allow for unsafe index access:
+
+```mad
+alpha = Array.fromList(["a", "b", "c"])
+IO.pTrace("...", alpha[0]) // ... a
+```
+
+However, there is **no safety net**. If you try to access an invalid index, your program will fail at runtime.
 ## Function parameters need parentheses
 
 Madlib has a slight difference from JavaScript with regard to unary functions:
@@ -156,7 +200,7 @@ nullary = () => 5
 unary = (x) => x
 binary = (x, y) => x ++ y
 ```
-## Function return types
+## Functions must return consistent types
 
 Like other strongly typed languages, Madlib mandates consistent returns. A function _cannot_ return multiple types. If you had this impractical function in JS:
 
