@@ -7,6 +7,29 @@ For developers coming to Madlib from JavaScript, there are a few notable differe
 
 There is no specific keyword needed to declare a variable, like `let` or `const` or `var` in JS. Instead all values are declared with the assignment operator, e.g. `x = 5` . However, values cannot be mutated, [[Language Design - Limit Mutation|except in limited circumstances]].
 
+## Logging is done with IO
+
+Unlike `console.log` in JavaScript, in Madlib you will want to use the [[Module - IO|IO module]]. It has some specific edges which may feel unfamiliar at first. Here are some examples:
+
+```mad
+import IO from "IO"
+
+main = () => {
+  IO.put("this is a sentence with no trailing newline")
+  IO.putLine("this is a sentence with a trailing newline")
+  pipe(
+    (x) => x + 5,
+    IO.trace("two plus five"),
+    (x) => ({x}),
+    IO.pTrace("pretty trace the record with x in it!")
+  )(2)
+}
+```
+
+## Runnable files need a `main` function
+
+Unlike JS, where all files are the same and have the same semantics: in Madlib if you want to run a file via `madlib run` (e.g. `madlib run ./src/Main.mad`) it expects that there is a `main` function. This function doesn't need any parameters and must have no return / return [[Core - Types#Unit|Unit]].
+
 ## Copies over Mutation
 
 In Madlib are [[Language Design - Limit Mutation|limited circumstances where values can be mutated]] — by default most functions will instead return a modified copy of the the original value. For instance, `List.append` will yield a new list of values rather than in-place mutation:
@@ -21,6 +44,11 @@ IO.pTrace("Note that list is unchanged!", #[list, list2])
 ```
 
 **NB**: This doesn't hold for the specialized [[Migration - Coming From JavaScript#Madlib Arrays|Array type]] but it is an outlier in the language.
+
+## Strings cannot be created with single-quotes
+
+In JavaScript, strings can be created with single quotes (`'`), double quotes (`"`) or backticks (`` ` ``). In Madlib, single quotes are used to delimit [[Core - Types#Char|Chars]]. Double quotes and backticks can both be used identically to their usage in JavaScript.
+
 ## Strict Equality
 
 Madlib has a single equality operator `==` and the language itself is designed to be [[Language Design - Explicitness|explicit]] where possible. Unlike JS, instead of forcing the developer to remember to use a different operator of increased strictness, `===` is not a valid operator and will throw a syntax error.
@@ -119,7 +147,7 @@ Without the `do`, this is a grammar error because it's not a single expression. 
 
 ## Working with Lists
 
-Though Madlib has an [[Monad - Array type|Array type]], unless you have a specific need for performance, you're more likely to be working with Lists.
+Though Madlib has an [[Type - Array|Array type]], unless you have a specific need for performance, you're more likely to be working with Lists.
 
 ```js
 const list = ["a", "b", "c"]
@@ -129,7 +157,7 @@ list[7] // undefined
 
 In the above code, trying to access the seventh index of `list` results in `undefined`.
 
-Unlike JavaScript, Madlib protects you by wrapping this unsafe operation in a [[Monad - Maybe Type|Maybe]].
+Unlike JavaScript, Madlib protects you by wrapping this unsafe operation in a [[Type - Maybe|Maybe]].
 
 An equivalent version of the same code in Madlib:
 
@@ -158,7 +186,7 @@ raw = pipe(
 Note that the type passed to `fromMaybe` must [[Migration - Coming From JavaScript#Function return types|be consistent]] with the value being unwrapped here (so in both cases it will return a raw String).
 ## Madlib Arrays
 
-Madlib has a specialized [[Monad - Array type|Array type]] which you can use if you have a specific need for performance. (If you're not sure, you _probably_ don't.)
+Madlib has a specialized [[Type - Array|Array type]] which you can use if you have a specific need for performance. (If you're not sure, you _probably_ don't.)
 
 You can create an Array from a List like so:
 ```mad

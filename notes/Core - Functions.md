@@ -23,7 +23,7 @@ Functions _should_ be preceded with a Hindley-Milner style [[Core - Type Signatu
 
 ## Consistent Return Type
 
-Functions _must_ return a consistent type, e.g. unlike [[Migration - Coming From JavaScript|in JavaScript]], you cannot have a function which returns an integer _or_ a string. If you want to allow for a function to return "different" types, you'll need to wrap that value with an [[Core - Algebraic Data Types|algebraic container type]]. For instance, if you want to model something that could otherwise result in failure, you could use the [[Core - Data Types#Maybe|Maybe]] type to encapsulate and elide over that — using `Nothing` to model failure and `Just` to model success.
+Functions _must_ return a consistent type, e.g. unlike [[Migration - Coming From JavaScript|in JavaScript]], you cannot have a function which returns an integer _or_ a string. If you want to allow for a function to return "different" types, you'll need to wrap that value with an [[Tutorial - Algebraic Data Types|algebraic container type]]. For instance, if you want to model something that could otherwise result in failure, you could use the [[Core - Data Types#Maybe|Maybe]] type to encapsulate and elide over that — using `Nothing` to model failure and `Just` to model success.
 
 ## Construction
 

@@ -10,7 +10,7 @@
 		{"id":"afa27c7b84e1c114","type":"file","file":"Madlib/Migration - Coming From JavaScript.md","x":60,"y":-906,"width":400,"height":440,"color":"3"},
 		{"id":"c7face1b22cdca08","type":"text","text":"The Edges","x":-685,"y":-175,"width":150,"height":50,"color":"2"},
 		{"id":"ff305f9c240bf3d3","type":"text","text":"The Basics","x":-225,"y":-346,"width":165,"height":50,"color":"1"},
-		{"id":"bf41484564c89f5d","type":"file","file":"Madlib/Core - Algebraic Data Types.md","x":-439,"y":-1853,"width":365,"height":360,"color":"1"},
+		{"id":"bf41484564c89f5d","type":"file","file":"Madlib/Tutorial - Algebraic Data Types.md","x":-439,"y":-1853,"width":365,"height":360,"color":"1"},
 		{"id":"2a19f018d5f68a92","type":"file","file":"Madlib/Core - Types.md","x":-439,"y":-1266,"width":365,"height":360,"color":"1"},
 		{"id":"a2731c5e06744584","type":"file","file":"Madlib/Core - Functions.md","x":-920,"y":-1266,"width":350,"height":360,"color":"1"},
 		{"id":"f7ddc0393a6fa8cc","type":"file","file":"Madlib/Core - Data Types.md","x":-1415,"y":-1266,"width":355,"height":360,"color":"1"},

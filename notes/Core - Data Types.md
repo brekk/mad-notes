@@ -38,9 +38,9 @@ x = Maybe.Just(5)
 ```
 
 ## Construction
-* [[Monad - Maybe Type|Maybe]]
-* [[Monad - Either Type|Either]]
-* [[Monad - Wish Type|Wish]]
+* [[Type - Maybe|Maybe]]
+* [[Type - Either|Either]]
+* [[Type - Wish|Wish]]
 * Set
 * Parser
 * Stream?
