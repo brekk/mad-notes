@@ -1,5 +1,0 @@
----
-aliases:
-  - Array type
-  - Array
----
