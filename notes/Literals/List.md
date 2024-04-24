@@ -13,10 +13,10 @@ listOfIntegers = [1,2,3,4,5,6]
 emptyList = []
 ```
 
-Though Madlib has an [[Type - Array|Array type]], unless you have a specific need for performance, in all likelihood you ought to be working with Lists.
+Though Madlib has an [[Array|Array type]], unless you have a specific need for performance, in all likelihood you ought to be working with Lists.
 ## Safe access
 
-In order to [[Language Design - Make Invalid States Unrepresentable|avoid illegal states]], some common List operations yield values wrapped in a [[Type - Maybe|Maybe]]:
+In order to [[Make Invalid States Unrepresentable|avoid illegal states]], some common List operations yield values wrapped in a [[Maybe|Maybe]]:
 ```mad
 import List from "List"
 list = ["a", "b", "c"]

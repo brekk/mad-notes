@@ -6,9 +6,9 @@ tags:
   - reference
   - prelude
 ---
-Madlib uses [[Type - List|Lists]] as a collection type in most circumstances.
+Madlib uses [[List|Lists]] as a collection type in most circumstances.
 
-Madlib has a specialized Array type which is designed for performance, but at the cost of safety. It eschews several of the considerations that have been placed upon Lists, chiefly [[Language Design - Limit Mutation|in-place mutation]] and [[Language Design - Make Invalid States Unrepresentable|unsafe access]].
+Madlib has a specialized Array type which is designed for performance, but at the cost of safety. It eschews several of the considerations that have been placed upon Lists, chiefly [[Limit Mutation|in-place mutation]] and [[Make Invalid States Unrepresentable|unsafe access]].
 
 ## Construction
 
@@ -21,7 +21,7 @@ a = Array.fromList(["a", "b", "c"])
 
 ## In-Place Mutation
 
-Arrays in Madlib are unusual in that they have operations which mutate them in place, unlike [[Migration - Coming From JavaScript#Copies over Mutation|most functions in Madlib]].
+Arrays in Madlib are unusual in that they have operations which mutate them in place, unlike [[Coming From JavaScript#Copies over Mutation|most functions in Madlib]].
 
 ```mad
 import Array from "Array"

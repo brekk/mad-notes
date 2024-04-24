@@ -7,7 +7,7 @@ tags:
   - literals
 ---
 
-A Char literal is a single character delimited by single quotes. It is a constituent part of [[Literal - String|String literals]].
+A Char literal is a single character delimited by single quotes. It is a constituent part of [[String|String literals]].
 
 ## Construction
 ```mad

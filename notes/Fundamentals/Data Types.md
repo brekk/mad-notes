@@ -5,13 +5,15 @@ tags:
   - fundamentals
   - prelude
 ---
+##### Synopsis
+- The built-in data types that Madlib ships with (also called Prelude) will give you powerful tools to manipulate and encapsulate logic within applications.
 ## Prelude
 
 Our standard library (the functionality available without a third-party library) is called **Prelude**, much like Haskell's. These documents may refer to the standard library and Prelude interchangeably.
 
 ## Usage
 
-To make use of the core data types, there are two kinds of [[Core - Imports|syntactic imports]], `import type` and concrete `import`s.
+To make use of the core data types, there are two kinds of [[Imports|syntactic imports]], `import type` and concrete `import`s.
 
 To use a data type in a function signature, you must import its type:
 
@@ -41,9 +43,9 @@ x = Maybe.Just(5)
 ```
 
 ## Construction
-* [[Type - Maybe|Maybe]]
-* [[Type - Either|Either]]
-* [[Type - Wish|Wish]]
+* [[Maybe|Maybe]]
+* [[Either|Either]]
+* [[Wish|Wish]]
 * Set
 * Parser
 * Stream?
@@ -53,7 +55,7 @@ x = Maybe.Just(5)
 Often you will want to access the interior values encapsulated with a given constructor. This can easily be done with the `where` keyword.
 This can be done explicitly or implicitly.
 ### Explicit deconstruction
-Say we have an [[Core - Data Types#Either|Either]] value which we want to access the internal value of:
+Say we have an [[Data Types#Either|Either]] value which we want to access the internal value of:
 ```
 import { Right } from "Either"
 

@@ -1,0 +1,25 @@
+import IO from "IO"
+import Tuple from "Tuple"
+
+
+
+// invalid!
+// t0 = #[]
+// t1 = #["one"]
+
+firstOfThree :: #[a, b, c] -> a
+firstOfThree = where {
+  #[a, _, _] =>
+    a
+}
+
+main = () => {
+  t2 = #["value", 1]
+  t3 = #["value", 1, "test"]
+  t3_1 = #[1, 'a', "test"]
+  Tuple.fst(t2) |> IO.trace("first of 2-tuple!")
+  firstOfThree(t3) |> IO.trace("first element of 3-tuple!")
+  firstOfThree(t3_1) |> IO.trace("first element of the second 3-tuple!")
+  // This is a type error because fst wants a 2-tuple!
+  // Tuple.fst(t3) |> IO.trace("fst of 3-tuple?")
+}

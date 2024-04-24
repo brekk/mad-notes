@@ -3,8 +3,10 @@ aliases:
   - Imports
 tags:
   - fundamentals
+  - syntax
 ---
-There are two kinds of imports; in the same way that there are [[Core - Type Signatures|type signatures]] and [[Core - Functions#Construction|function implementations]], there are both `type` imports and concrete imports.
+##### Synopsis
+- The `import` keyword is used to reference code written in a different file / module within the current file. It is the complement / consumer side of [[export]] syntax. There are two kinds of imports; in the same way that there are [[Type Signatures|type signatures]] and [[Functions#Construction|function implementations]], there are both `type` imports and concrete imports.
 
 ## Type Imports
 
@@ -16,7 +18,7 @@ import type { Maybe } from "Maybe"
 
 ## Concrete Imports
 
-In order to import a concrete value (for use in [[Core - Functions#Construction|function implementations]]), one can either import a named container literal or specific import, using the `import` keyword.
+In order to import a concrete value (for use in [[Functions#Construction|function implementations]]), one can either import a named container literal or specific import, using the `import` keyword.
 
 ### Named literal import
 
@@ -49,7 +51,7 @@ import M from "Maybe"
 fromMaybe = M.fromMaybe
 ```
 
-In the pursuit of [[Language Design - Explicitness|explicitness]] we have eschewed renaming the imported values as a syntactic feature, but you can do so manually if you wish:
+In the pursuit of [[Explicitness|explicitness]] we have eschewed renaming the imported values as a syntactic feature, but you can do so manually if you wish:
 
 ```
 import { always, identity } from "Function"

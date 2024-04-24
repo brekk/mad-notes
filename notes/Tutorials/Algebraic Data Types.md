@@ -7,10 +7,10 @@ tags:
 ---
 Algebraic data types are one of the powerful constructs we've borrowed from other functional languages, like Haskell. Using these container types we can model complex domains logically.
 
-There are built-in data types listed in [[Core - Data Types|Data Types]], this document will aim to provide a specific tutorial on concrete usage of these ADTs.
+There are built-in data types listed in [[Data Types|Data Types]], this document will aim to provide a specific tutorial on concrete usage of these ADTs.
 ## Example
 
-Let's say that we are running a bakery and we have pastries that we want to be able to sell. These could be modeled as a [[Core - Types#Records|Record]] with possibly invalid values:
+Let's say that we are running a bakery and we have pastries that we want to be able to sell. These could be modeled as a [[Types#Records|Record]] with possibly invalid values:
 
 ```
 alias Pastry = {
