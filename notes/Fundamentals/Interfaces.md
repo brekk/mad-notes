@@ -1,7 +1,5 @@
 ---
-aliases:
-  - Instances
-  - Interfaces
+aliases: []
 tags:
   - fundamentals
 ---

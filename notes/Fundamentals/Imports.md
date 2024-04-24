@@ -1,12 +1,11 @@
 ---
-aliases:
-  - Imports
+aliases: []
 tags:
   - fundamentals
   - syntax
 ---
 ##### Synopsis
-- The `import` keyword is used to reference code written in a different file / module within the current file. It is the complement / consumer side of [[export]] syntax. There are two kinds of imports; in the same way that there are [[Type Signatures|type signatures]] and [[Functions#Construction|function implementations]], there are both `type` imports and concrete imports.
+- The `import` keyword is used to reference code written in a different file / module within the current file. It is the complement / consumer side of [[Exports|export]] syntax. There are two kinds of imports; in the same way that there are [[Type Signatures|type signatures]] and [[Functions#Construction|function implementations]], there are both `type` imports and concrete imports.
 
 ## Type Imports
 

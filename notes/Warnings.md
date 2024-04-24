@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Warnings
+aliases: []
 tags:
   - reference
   - error

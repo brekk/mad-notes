@@ -1,11 +1,13 @@
 ---
-aliases:
-  - List
+aliases: []
 tags:
   - reference
   - prelude
+  - fundamentals
+  - literals
 ---
-A List is a collection of the same type, delimited by square brackets.
+##### Synopsis
+- A List is a literal collection of the same type, delimited by square brackets.
 
 ```mad
 listOfStrings = ["hey", "cool", "nice"]

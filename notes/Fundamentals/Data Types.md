@@ -1,15 +1,24 @@
 ---
-aliases:
-  - Data Types
+aliases: []
 tags:
   - fundamentals
   - prelude
 ---
 ##### Synopsis
-- The built-in data types that Madlib ships with (also called Prelude) will give you powerful tools to manipulate and encapsulate logic within applications.
+- The built-in algebraic data types that Madlib ships with will give you powerful tools to manipulate and encapsulate logic within applications.
 ## Prelude
 
 Our standard library (the functionality available without a third-party library) is called **Prelude**, much like Haskell's. These documents may refer to the standard library and Prelude interchangeably.
+
+## Core Data Types
+
+```dataview
+LIST L.text
+FROM "Data Types"
+FLATTEN file.lists AS L
+WHERE meta(L.section).subpath = "Synopsis"
+SORT file.name
+```
 
 ## Usage
 
@@ -42,50 +51,6 @@ import Maybe from "Maybe"
 x = Maybe.Just(5)
 ```
 
-## Construction
-* [[Maybe|Maybe]]
-* [[Either|Either]]
-* [[Wish|Wish]]
-* Set
-* Parser
-* Stream?
-* Comparison
-* 
 ## Deconstruction
-Often you will want to access the interior values encapsulated with a given constructor. This can easily be done with the `where` keyword.
-This can be done explicitly or implicitly.
-### Explicit deconstruction
-Say we have an [[Data Types#Either|Either]] value which we want to access the internal value of:
-```
-import { Right } from "Either"
 
-x = Right("Brekk")
-```
-We can explicitly deconstruct this value (to access the string `"Brekk"` within it) with `where (x) { [...] }`:
-```
-import { Right, Left } from "Either"
-
-x = Right("Brekk")
-
-str = where (x) {
-  Right(value) => "Name: " ++ value
-  Left(error) => "Error: " ++ error
-}
-```
-(For the purposes of this example we're assuming that this `x` value is of type `Either String String`. Note that if we omitted the `Left` deconstruction above, we would get an [[Warnings|incomplete pattern warning]])
-
-### Implicit deconstruction
-For convenience and composition, a `where` deconstruction without an explicit parameter is treated like a unary function which expects one parameter. Taking the example from above, the following code results in the same behavior:
-```
-import { Right, Left } from "Either"
-
-x = Right("Brekk")
-
-getString :: Either String String -> String
-getString = where {
-  Right(value) => "Name: " ++ value
-  Left(error) => "Error: " ++ error
-}
-
-str = getString(x)
-```
+A common pattern in Madlib is to use [[Pattern Matching|pattern matching via `where`]] to deconstruct the interior values of a given data type.

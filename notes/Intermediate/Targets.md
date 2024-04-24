@@ -1,7 +1,5 @@
 ---
-aliases:
-  - Code Targets
-  - iftarget
+aliases: []
 tags:
   - syntax
   - fundamentals

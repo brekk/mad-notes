@@ -1,14 +1,13 @@
 ---
-aliases:
-  - Array type
-  - Array
+aliases: []
 tags:
   - reference
   - prelude
 ---
-Madlib uses [[List|Lists]] as a collection type in most circumstances.
+##### Synopsis
+- Madlib has a specialized Array type which is designed for performance, but at the cost of safety. It eschews several of the considerations that have been built into Lists, chiefly [[Limit Mutation|in-place mutation]] and [[Make Invalid States Unrepresentable|unsafe access]].
 
-Madlib has a specialized Array type which is designed for performance, but at the cost of safety. It eschews several of the considerations that have been placed upon Lists, chiefly [[Limit Mutation|in-place mutation]] and [[Make Invalid States Unrepresentable|unsafe access]].
+Madlib uses [[List|Lists]] as a collection type in most circumstances.
 
 ## Construction
 

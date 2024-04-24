@@ -15,8 +15,8 @@
 		{"id":"a2731c5e06744584","type":"file","file":"Fundamentals/Functions.md","x":-920,"y":-1266,"width":350,"height":360,"color":"1"},
 		{"id":"f7ddc0393a6fa8cc","type":"file","file":"Fundamentals/Data Types.md","x":-1415,"y":-1266,"width":355,"height":360,"color":"1"},
 		{"id":"257e812259605082","type":"file","file":"Fundamentals/Type Signatures.md","x":-920,"y":-1853,"width":350,"height":360,"color":"1"},
-		{"id":"ee365b52de0b4e9a","type":"file","file":"Fundamentals/Targets.md","x":-920,"y":-740,"width":360,"height":340,"color":"2"},
-		{"id":"98dae703428de801","type":"file","file":"Syntax/The Fence.md","x":-1415,"y":-740,"width":355,"height":340,"color":"2"},
+		{"id":"ee365b52de0b4e9a","type":"file","file":"Intermediate/Targets.md","x":-920,"y":-740,"width":360,"height":340,"color":"2"},
+		{"id":"98dae703428de801","type":"file","file":"Intermediate/The Fence.md","x":-1415,"y":-740,"width":355,"height":340,"color":"2"},
 		{"id":"6fd3f75e6bad4e84","type":"file","file":"Language Design/Familiarity.md","x":-1320,"y":-40,"width":400,"height":570,"color":"6"}
 	],
 	"edges":[

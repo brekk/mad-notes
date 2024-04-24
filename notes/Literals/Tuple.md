@@ -1,11 +1,11 @@
 ---
-aliases:
-  - Tuple
+aliases: []
 tags:
   - fundamentals
   - literals
 ---
-A specific length (two elements or more) enumeration of possibly mixed types, delimited by square brackets beginning with a hash, e.g. `#["two", 2]`.
+##### Synopsis
+- A tuple is an enumerated literal of specific length (two elements or more) containing possibly mixed types, delimited by square brackets beginning with a hash, e.g. `#["two", 2]`.
 
 A tuple must have at least two types in it; an "empty" tuple or a tuple with a single type is logically and syntactically invalid.
 
@@ -15,4 +15,4 @@ Tuples of different lengths or constituent types are considered separate data ty
 
 ## Deconstruction
 
-Tuples can be deconstructed [[where|with where]]
+Tuples can be deconstructed [[Pattern Matching|where]] syntax.

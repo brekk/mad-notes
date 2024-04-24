@@ -14,10 +14,13 @@ firstOfThree = where {
 }
 
 main = () => {
+  // 2-tuple
   t2 = #["value", 1]
+  Tuple.fst(t2) |> IO.trace("first of 2-tuple!")
+
+  // 3-tuple
   t3 = #["value", 1, "test"]
   t3_1 = #[1, 'a', "test"]
-  Tuple.fst(t2) |> IO.trace("first of 2-tuple!")
   firstOfThree(t3) |> IO.trace("first element of 3-tuple!")
   firstOfThree(t3_1) |> IO.trace("first element of the second 3-tuple!")
   // This is a type error because fst wants a 2-tuple!

@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Functions
+aliases: []
 tags:
   - fundamentals
 ---

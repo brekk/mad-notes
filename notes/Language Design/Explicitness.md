@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Explicitness
+aliases: []
 tags:
   - language-design
 ---

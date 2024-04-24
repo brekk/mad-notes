@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Type Signatures
+aliases: []
 tags:
   - fundamentals
 ---

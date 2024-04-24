@@ -1,13 +1,12 @@
 ---
 aliases:
-  - Char
   - Character
 tags:
   - fundamentals
   - literals
 ---
-
-A Char literal is a single character delimited by single quotes. It is a constituent part of [[String|String literals]].
+##### Synopsis
+- A Char is a literal type that defines a single character delimited by single quotes. It is a constituent part of [[String|String literals]].
 
 ## Construction
 ```mad

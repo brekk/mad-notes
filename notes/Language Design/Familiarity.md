@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Familiarity
+aliases: []
 tags:
   - language-design
 ---

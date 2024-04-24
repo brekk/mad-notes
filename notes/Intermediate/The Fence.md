@@ -1,6 +1,5 @@
 ---
-aliases:
-  - The Fence
+aliases: []
 tags:
   - dx
   - fundamentals

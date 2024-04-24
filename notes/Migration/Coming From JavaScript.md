@@ -1,18 +1,18 @@
 ---
-aliases:
-  - Coming From JavaScript
+aliases: []
 tags:
   - fundamentals
   - reference
 ---
 For developers coming to Madlib from JavaScript, there are a few notable differences one should be aware of.
+
 ## Variable declaration
 
 There is no specific keyword needed to declare a variable, like `let` or `const` or `var` in JS. Instead all values are declared with the assignment operator, e.g. `x = 5` . However, values cannot be mutated, [[Limit Mutation|except in limited circumstances]].
 
 ## Logging is done with IO
 
-Unlike `console.log` in JavaScript, in Madlib you will want to use the [[Module - IO|IO module]]. It has some specific edges which may feel unfamiliar at first. Here are some examples:
+Unlike `console.log` in JavaScript, in Madlib you will want to use the [[IO|IO module]]. It has some specific edges which may feel unfamiliar at first. Here are some examples:
 
 ```mad
 import IO from "IO"
@@ -29,6 +29,17 @@ main = () => {
 }
 ```
 
+Additionally, you may need to call `show`, which is a built-in function that coerces values into strings, in order to pass a value to one of the IO functions.
+
+```
+import IO from "IO"
+
+main = () => {
+  IO.put(12345) // this results in an "Instance not found" error
+}
+```
+
+This can be fixed by changing the logging line to: `IO.put(show(12345))` 
 ## Runnable files need a `main` function
 
 Unlike JS, where all files are the same and have the same semantics: in Madlib if you want to run a file via `madlib run` (e.g. `madlib run ./src/Main.mad`) it expects that there is a `main` function. This function doesn't need any parameters and must have no return / return [[Types#Unit|Unit]].
@@ -54,7 +65,7 @@ In JavaScript, strings can be created with single quotes (`'`), double quotes (`
 
 ## Strict Equality
 
-Madlib has a single equality operator `==` and the language itself is designed to be [[Explicitness|explicit]] where possible. Unlike JS, instead of forcing the developer to remember to use a different operator of increased strictness, `===` is not a valid operator and will throw a syntax error.
+Madlib has a single equality operator <code>==</code> and the language itself is designed to be [[Explicitness|explicit]] where possible. Unlike JS, instead of forcing the developer to remember to use a different operator of increased strictness, <code>===</code> is not a valid operator and will throw a syntax error.
 
 ## Conditionals
 
@@ -187,6 +198,7 @@ raw = pipe(
 ```
 
 Note that the type passed to `fromMaybe` must [[Coming From JavaScript#Function return types|be consistent]] with the value being unwrapped here (so in both cases it will return a raw String).
+
 ## Madlib Arrays
 
 Madlib has a specialized [[Array|Array type]] which you can use if you have a specific need for performance. (If you're not sure, you _probably_ don't.)
@@ -217,6 +229,7 @@ IO.pTrace("...", alpha[0]) // ... a
 ```
 
 However, there is **no safety net**. If you try to access an invalid index, your program will fail at runtime.
+
 ## Function parameters need parentheses
 
 Madlib has a slight difference from JavaScript with regard to unary functions:
@@ -231,6 +244,7 @@ nullary = () => 5
 unary = (x) => x
 binary = (x, y) => x ++ y
 ```
+
 ## Functions must return consistent types
 
 Like other strongly typed languages, Madlib mandates consistent returns. A function _cannot_ return multiple types. If you had this impractical function in JS:

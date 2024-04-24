@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Mutation
+aliases: []
 tags:
   - language-design
 ---

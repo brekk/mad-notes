@@ -9,8 +9,8 @@ tags:
   - literals
   - fundamentals
 ---
-
-Madlib has several literal types that represent numeric values.
+##### Synopsis
+- Madlib has several literal types that represent numeric values, they can be one of the following: Integers, Bytes, Shorts or Floats
 
 When needed in functions which can accept generic numbers, remember to declare the [constraints](app://obsidian.md/Core%20-%20Functions#Constraints).
 

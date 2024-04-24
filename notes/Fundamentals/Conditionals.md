@@ -1,12 +1,11 @@
 ---
-aliases:
-  - Conditionals
+aliases: []
 tags:
   - logic
   - fundamentals
 ---
 ##### Synopsis
-- Conditionals in Madlib are designed to be logically equivalent to ternary expressions. They are single-expression by default, they have implicit returns, and they must be complete (they cannot short-circuit).
+- Conditionals in Madlib are designed to be logically equivalent to ternary expressions. They are single-expression by default, they have implicit returns and they must be complete (they cannot short-circuit).
 
 ## Conditionals with `if` ... `else`
 
