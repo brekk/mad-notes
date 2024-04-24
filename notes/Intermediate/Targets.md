@@ -5,10 +5,7 @@ tags:
   - fundamentals
 ---
 ##### Synopsis
-- `#iftarget` syntax is used to specify code which is reliant on a specific ecosystem / target
-
-## Examples
-
+- `#iftarget` syntax is used to specify code which is reliant on a specific ecosystem / target. It pairs well with [[The Fence]] and the [[Externally linked libraries|extern]] keyword when targeting JavaScript and LLVM environments respectively.
 
 Code _should_ be written to be portable across all-targets by default:
 - JS / web code uses `#iftarget js`

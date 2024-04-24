@@ -1,3 +1,7 @@
+---
+tags:
+  - fundamentals
+---
 ```dataview
 LIST L.text
 FROM "Fundamentals"

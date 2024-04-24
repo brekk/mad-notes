@@ -9,7 +9,6 @@ tags:
 ## Literals
 
 Here is a list of types that have a literal syntax:
-
 ```dataview
 LIST L.text
 FROM ("Literals" AND #literals)
@@ -20,7 +19,6 @@ SORT file.name
 ## Data Types
 
 Here is a list of data types that are core to Madlib:
-
 ```dataview
 LIST L.text
 FROM "Data Types"
