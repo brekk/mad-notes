@@ -6,7 +6,7 @@ tags:
 ---
 ##### Synopsis
 - An Either is a tagged union which allows us to elide over cases which are [[Make Invalid States Unrepresentable|otherwise impossible or illogical]] while capturing additional information for consumption downstream; success values are wrapped in `Right` and failure values are wrapped in a `Left`. It is similar to the [[Maybe]] type but unlike the `Nothing` constructor the `Left` can be transformed and contains additional info.
-## Constructors
+## Construction
 ### Left
 A unary constructor which captures a failure case
 ### Right

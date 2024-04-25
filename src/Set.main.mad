@@ -1,0 +1,15 @@
+import IO from "IO"
+import {} from "Number"
+import Set from "Set"
+
+
+
+main = () => {
+  Set.fromList([1, 2, 3, 4, 5, 5, 6, 6, 6, 6]) |> Set.insert(7) |> IO.pTrace("set!")
+  Set.singleton(4) |> Set.insert(6) |> IO.pTrace("singlies!")
+  // This is invalid
+  // Set.singleton([1, 2, 4]) |> Set.insert(6) |> IO.pTrace("singlies!")
+  Set.singleton([1, 2, 3]) |> IO.pTrace("Set of one list")
+  Set.singleton([1, 2, 4]) |> Set.insert([1, 2, 4]) |> Set.insert([6]) |> IO.pTrace("set of lists!")
+  Set.empty |> IO.pTrace("empty set!")
+}

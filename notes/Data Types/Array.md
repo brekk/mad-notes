@@ -11,7 +11,8 @@ Madlib uses [[List|Lists]] as a collection type in most circumstances.
 
 ## Construction
 
-You can create an Array from a List like so:
+Sets are most easily constructed using `Array.fromList`:
+
 ```mad
 import Array from "Array"
 
