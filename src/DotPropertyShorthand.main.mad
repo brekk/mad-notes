@@ -1,0 +1,10 @@
+import IO from "IO"
+import String from "String"
+
+
+
+person = { name: "Arnaud" }
+
+main = () => {
+  .name(person) |> IO.put
+}

@@ -2,7 +2,7 @@ In designing Madlib we've tried to [[Familiarity|cleave to the familiar]], but w
 
 Much of the language is designed to feel reasonably similar to JavaScript syntax, with a bit of Haskell thrown in.
 
-To that end we have a few syntactic shorthands which are aimed at making interacting with the type system compelling and powerful. One such feature is the [[Dot Property shorthand]], which allows for accessing the fields of [[Records]] as simple as writing the field with a period before it.
+To that end we have a few syntactic shorthands which are aimed at making interacting with the type system compelling and powerful. One such feature is the [[Record]], which allows for accessing the fields of [[Record|Records]] as simple as writing the field with a period before it.
 ## JavaScript
 - [[The Fence]] allows for a JS escape hatch at the cost of automatic inference
 ## LLVM

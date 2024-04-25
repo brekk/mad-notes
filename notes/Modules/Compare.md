@@ -4,9 +4,12 @@ tags:
   - equality
 ---
 ##### Synopsis
-- The Compare module provides fundamental tooling for comparative equality. It also provides the `Comparable` [[Interfaces|interface]], which can be [[Interfaces#Derive|derived]].
+- The Compare module provides fundamental tooling for comparative equality. It also provides the `Comparable` [[Interfaces|interface]], which can be automatically[[Interfaces#Derivation|derived]].
 
 ## Constructors
 
 ### EQ
+### LT
+### GT
+
 

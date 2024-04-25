@@ -10,6 +10,10 @@ For developers coming to Madlib from JavaScript, there are a few notable differe
 
 There is no specific keyword needed to declare a variable, like `let` or `const` or `var` in JS. Instead all values are declared with the assignment operator, e.g. `x = 5` . However, values cannot be mutated, [[Limit Mutation|except in limited circumstances]].
 
+## Concatenating Strings has a different operator
+
+In JavaScript, the same operator is used for adding numbers and concatenating strings (`+`), e.g. `5 + 4` / `"hello " + "world"`. In Madlib, addition is the same, but concatenating strings requires the `++` operator (which is infixed / between operands). There is also a globally available function `mconcat` which affords the same behavior but as a function instead of an operator. `mconcat("hello ", "world") == "hello " ++ "world"`
+
 ## Logging is done with IO
 
 Unlike `console.log` in JavaScript, in Madlib you will want to use the [[IO|IO module]]. It has some specific edges which may feel unfamiliar at first. Here are some examples:

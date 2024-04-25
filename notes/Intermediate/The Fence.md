@@ -4,8 +4,7 @@ tags:
   - dx
   - fundamentals
 ---
-
-### Synopsis
+##### Synopsis
 - The Fence is a syntactic escape hatch which allows for raw JavaScript to be written in Madlib between `#-` ... `-#` pairs, at the cost of automatic inference.
 
 **The Fence** is our built-in escape hatch. While Madlib has a powerful type and inference system, "fenced" code allows you to drop down to any native JS construct. However, doing so will eschew any of the automatic type inference and instead treat code within the **The Fence** as opaque.

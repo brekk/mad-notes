@@ -1,0 +1,12 @@
+import IO from "IO"
+
+
+
+main = () => {
+  pipe(
+    (x) => x ++ x,
+    (x) => "b" ++ x,
+    (x) => x ++ "a",
+    IO.put,
+  )("an")
+}
