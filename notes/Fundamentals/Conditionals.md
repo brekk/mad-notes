@@ -5,7 +5,7 @@ tags:
   - fundamentals
 ---
 ##### Synopsis
-- Conditionals in Madlib are designed to be logically equivalent to ternary expressions. They are single-expression by default, they have implicit returns and they must be complete (they cannot short-circuit).
+- Conditionals (both `if` ...  `else` and ternary expressions) in Madlib are designed to be logically equivalent. They are single-expression by default, they have implicit returns and they must be complete (they cannot short-circuit).
 
 ## Conditionals with `if` ... `else`
 
@@ -67,7 +67,7 @@ return if (x < 5) {
   } else {
     "b"
   }
-} else if (x < 15) {
+} else {
   "c"
 }
 ```

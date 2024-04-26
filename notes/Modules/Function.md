@@ -44,7 +44,7 @@ identity(100) // 100
 
 ### equals
 
-A function which takes two values and compares them, returning true if they are equivalent. This is especially helpful when working in a [[Pipe Composition|composed function]].
+A function which takes two values and compares them, returning true if they are equivalent. This is especially helpful when working in a [[Functions - Pipe Composition|composed function]].
 
 ```mad
 import { equals } from "Function"
@@ -61,7 +61,7 @@ pipe(
 
 ### notEquals
 
-A function which takes two values and compares them, returning true if they are not equivalent. (It is the [[Function#complement|complement]] of [[Function#equals|equals]].) This is especially helpful when working in a [[Pipe Composition|pipe composition]].
+A function which takes two values and compares them, returning true if they are not equivalent. (It is the [[Function#complement|complement]] of [[Function#equals|equals]].) This is especially helpful when working in a [[Functions - Pipe Composition|pipe composition]].
 
 ```mad
 import { notEquals } from "Function"
@@ -78,7 +78,7 @@ pipe(
 
 ### ifElse
 
-A function which takes a predicate and two transformation functions. It is helpful for control flow in [[Pipe Composition|pipe composition]].
+A function which takes a predicate and two transformation functions. It is helpful for control flow in [[Functions - Pipe Composition|pipe composition]].
 
 ```mad
 import { ifElse, equals } from "Function"
@@ -92,7 +92,7 @@ ifElse(
 
 ### when
 
-A function which takes a predicate and a transformation function. If the predicate returns true, it runs the transformation function against the input. Otherwise the value is untransformed. `when` is a partial application of `ifElse` where the failure path is `identity`. It is helpful for control flow in [[Pipe Composition|pipe composition]].
+A function which takes a predicate and a transformation function. If the predicate returns true, it runs the transformation function against the input. Otherwise the value is untransformed. `when` is a partial application of `ifElse` where the failure path is `identity`. It is helpful for control flow in [[Functions - Pipe Composition|pipe composition]].
 
 ```mad
 import { when, equals } from "Function"
@@ -105,7 +105,7 @@ when(
 
 ### unless
 
-A function which takes a predicate and a transformation function. If the predicate returns false, it runs the transformation function against the input. Otherwise the value is untransformed. `unless` is a partial application of `ifElse` where the success path is `identity`. It is helpful for control flow in [[Pipe Composition|pipe composition]].
+A function which takes a predicate and a transformation function. If the predicate returns false, it runs the transformation function against the input. Otherwise the value is untransformed. `unless` is a partial application of `ifElse` where the success path is `identity`. It is helpful for control flow in [[Functions - Pipe Composition|pipe composition]].
 
 ```mad
 import { unless, equals } from "Function"
@@ -118,7 +118,7 @@ unless(
 
 ### not
 
-A function which takes a boolean and inverts it. It is the functional form of the boolean inversion operator (`!`). It is helpful for logic within [[Pipe Composition]]. Note that `not` is similar to `complement` but instead of inverting a function it inverts a value.
+A function which takes a boolean and inverts it. It is the functional form of the boolean inversion operator (`!`). It is helpful for logic within [[Functions - Pipe Composition]]. Note that `not` is similar to `complement` but instead of inverting a function it inverts a value.
 
 ```mad
 import { not } from "Function"

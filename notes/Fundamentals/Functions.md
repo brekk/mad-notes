@@ -4,7 +4,7 @@ tags:
   - fundamentals
 ---
 ##### Synopsis
-- Functions are one of the core abstractions used by Madlib. They have a type signature which helps frame the types that a function takes as parameters and the type which it returns. The compiler can then help developers write code correctly.
+- Functions are one of the core abstractions used by Madlib. They have a type signature frames the types that a function takes as parameters and the type which it returns. The compiler can then help developers write code correctly.
 
 Examples:
 ```
@@ -35,34 +35,11 @@ Functions can be a lambda-style expression without braces and an implicit `retur
 
 ## `do` Notation
 
-Functions may use `do` notation to unwrap monadic computation.
-## Composition
+Functions may use [[Do Notation|do notation]] to unwrap monadic computation or in [[Conditionals|conditionals]] to allow for multiple expressions 
+## Pipe Composition
 
-Functions may be composed using the `pipe` keyword, which takes a variadic number of functions as parameters, and returns a unary function.
-
-Example:
-```
-timesFiveMinusTwo = pipe(
-  (x) => x * 5,
-  (x) => x - 2,
-)
-
-timesFiveMinusTwo(10) // 48
-```
+Functions [[Functions - Pipe Composition|can be composed]] using the `pipe` keyword, which takes a variadic number of functions as parameters, and returns a unary function.
 
 ## Curried
 
-In Madlib, functions with an arity greater than one are curried, so if a function is given fewer parameters than it needs to produce a value, it will instead return a function which expects the remaining parameters.
-
-Example:
-```
-wave :: String -> String -> String
-wave = (greeting, name) => greeting ++ name
-
-hi = wave("Hello, ")
-
-pipe(
-  map(hi),
-  IO.putLine
-)(["Brekk", "Arnaud"]) // ["Hello, Brekk", "Hello, Arnaud"]
-```
+In Madlib, all functions are [[Functions - Curry|automatically curried]].

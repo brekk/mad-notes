@@ -1,11 +1,13 @@
 ---
 aliases:
   - autocurry
+  - Curry
 tags:
   - "#fundamentals"
+  - partial-application
 ---
 ##### Synopsis
-- Currying refers to the operation of translating a function that takes multiple arguments into a sequence of functions, each taking a single argument. Automatically curried functions, when passed fewer than the arguments they expect, yield a function that expects the remaining parameters. All greater-than-unary functions (expecting more than a single parameter) in Madlib are automatically curried. This allows for generic functions which afford partial application and named morphisms of concrete functions.
+- Currying refers to the operation of translating a function that takes multiple arguments into a sequence of functions, each taking a single argument. Automatically curried functions, when passed fewer than the arguments they expect, yield a function that expects the remaining parameters. All functions in Madlib are automatically curried. This allows for generic functions which afford partial application and named morphisms of concrete functions.
 
 ## Example
 

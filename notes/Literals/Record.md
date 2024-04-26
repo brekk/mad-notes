@@ -9,4 +9,4 @@ tags:
 
 ## Dot Property shorthand
 
-Madlib has a sugar syntax for accessing a property of a [[Record]] simply. If there is a Record with a "name" field, e.g. `person = { name: "Arnaud" }`, we can both access the name inline, like `person.name`, or we can use the dot property shorthand to access the value as a function: `.name(person)`. This is especially helpful when combined with [[Pipe Composition|pipe composition]], e.g. `pipe(.name, String.toUpper)(person)`
+Madlib has a sugar syntax for accessing a property of a [[Record]] simply. If there is a Record with a "name" field, e.g. `person = { name: "Arnaud" }`, we can both access the name inline, like `person.name`, or we can use the dot property shorthand to access the value as a function: `.name(person)`. This is especially helpful when combined with [[Functions - Pipe Composition|pipe composition]], e.g. `pipe(.name, String.toUpper)(person)`

@@ -1,12 +1,13 @@
 ---
 aliases:
   - Pipe
+  - Pipe Composition
 tags:
   - fundamentals
   - syntax
 ---
 ##### Synopsis
-- Pipe composition is a fundamental tool for combining unary functions. Instead of writing a function which takes the result of another function as its input ( `f(g(x))` ) we can instead compose functions together left-to-right with pipe: `pipe(g, f)(x)`. This aids algebraic logic, empowers equational reasoning and allows for succinct and expressive code. This feature, combined with automatic [[Curry|curry]], allows for tacit (sometimes called point-free) programs.
+- Pipe composition is a fundamental tool for combining unary functions. Instead of writing a function which takes the result of another function as its input ( `f(g(x))` ) we can instead compose functions together left-to-right with pipe: `pipe(g, f)(x)`. This aids algebraic logic, empowers equational reasoning and allows for succinct and expressive code. This feature, combined with automatic [[Functions - Curry|curry]], allows for tacit (sometimes called point-free) programs.
 
 
 ## Usage
@@ -26,7 +27,7 @@ main = () => {
 }
 ```
 
-Here's the same thing but written with the `mconcat` function which combines two Strings together (`String -> String -> String`), and leverages the [[Curry#Function Application Operator|function application operator]] (`$`):
+Here's the same thing but written with the `mconcat` function which combines two Strings together (`String -> String -> String`), and leverages the [[Functions - Curry#Function Application Operator|function application operator]] (`$`):
 
 ```
 import IO from "IO"

@@ -1,0 +1,102 @@
+import type { Maybe } from "Maybe"
+
+import IO from "IO"
+import { Just, Nothing, fromMaybe } from "Maybe"
+
+
+
+a = (m) => {
+  IO.trace("a", m)
+  return m
+}
+
+a2 = IO.trace("a2")
+
+b = (m) => do {
+  n <- m
+  IO.trace("b", n)
+  return Just(n)
+}
+
+b2 = map(IO.trace("b2"))
+
+c = pipe(
+  fromMaybe("???"),
+  IO.trace("c"),
+)
+
+tier :: Integer -> String
+tier = (x) => if (x < 5) {
+  "a"
+} else if (x >= 5 && x < 10) do {
+  IO.trace("the b case", x)
+  return "b"
+} else {
+  "c"
+}
+
+whileDo :: Integer -> List Integer
+whileDo = (x) => {
+  i = 0
+  stack = []
+  while(i < x) do {
+    stack := [...stack, i]
+    i := i + 1
+  }
+  return stack
+}
+
+whileDont :: Integer -> List Integer
+whileDont = (x) => {
+  i = 0
+  stack = []
+  invoke = (j) => {
+    stack := [...stack, j]
+    i := j + 1
+  }
+  while(i < x) {
+    invoke(i)
+  }
+  return stack
+}
+
+whereDont :: Maybe Integer -> String
+whereDont = where {
+  Just(_) =>
+    `This number is valid!`
+
+  Nothing =>
+    `This number is invalid!`
+}
+
+
+whereDo :: Maybe Integer -> String
+whereDo = where {
+  Just(x) =>
+    do {
+      IO.trace("The valid number is", x)
+      return `This number is valid!`
+    }
+
+  Nothing =>
+    `This number is invalid!`
+}
+
+main = () => {
+  x = Just("x")
+  // monadic do
+  a(x)
+  a2(x)
+  b(x)
+  b2(x)
+  c(x)
+  c(Nothing)
+  // conditional do
+  tier(7)
+  // while do
+  whileDo(3) |> show |> IO.trace("while do")
+  whileDont(3) |> show |> IO.trace("while don't")
+  // where do
+  whereDont(Just(5)) |> IO.trace("where don't")
+  whereDo(Just(5)) |> IO.trace("where do")
+}

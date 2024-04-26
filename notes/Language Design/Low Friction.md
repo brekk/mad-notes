@@ -1,3 +1,7 @@
+---
+tags:
+  - language-design
+---
 In designing Madlib we've tried to [[Familiarity|cleave to the familiar]], but we also want to make adopting the Madlib paradigms both [[Explicitness|explicit]] and involve as little friction / convenience as possible.
 
 Much of the language is designed to feel reasonably similar to JavaScript syntax, with a bit of Haskell thrown in.
