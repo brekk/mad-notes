@@ -1,0 +1,2 @@
+##### Synopsis
+- Like other functional programming languages, Madlib has a Unit type, a singleton value which can hold no information — this is expressed syntactically as `{}`. This value can be compared, e.g. `{} == {}`. In functions and conditions which do not yield a value, Unit is returned.

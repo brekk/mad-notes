@@ -1,0 +1,14 @@
+import Fn from "Function"
+import IO from "IO"
+
+
+
+main = () => {
+  unit = {}
+  IO.pTrace("is unit comparable?", unit == {})
+  check = true
+  // invalid without do
+  if (check) do {
+    IO.pTrace(">>>", check)
+  }
+}

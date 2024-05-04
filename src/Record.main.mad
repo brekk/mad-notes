@@ -1,0 +1,31 @@
+alias CoolRec = { j :: Boolean, k :: Boolean, l :: String }
+
+/*
+// invalid constructs
+list = []
+key = "key"
+crap = {
+  // can't be a numeric key
+  7: "seven"
+  // can't be a dynamic array key
+  [list]: 7 
+  // can't be a dynamic string key
+  [key]: 7
+}
+
+
+// invalid
+myPartialRecord = {j: true}
+myPartialRecord.k = false
+*/
+
+main = () => {
+  nice = { cool: 2, _7: "seven" }
+  myRecord :: CoolRec
+  myRecord = { j: true, k: false, l: "hello" }
+
+  myPartialRecord = { j: true }
+  myOtherRecord = { l: "hello" }
+  myRecord2 :: CoolRec
+  myRecord2 = { ...myPartialRecord, k: false, l: "hello" }
+}
