@@ -19,6 +19,20 @@ myPartialRecord = {j: true}
 myPartialRecord.k = false
 */
 
+type Item = Item(Integer, String, String)
+
+alias PersonWithCart = { address :: String, cart :: List Item, name :: String }
+
+customer = { name: "Brekk", address: "The Moon!", cart: [] }
+
+// invalid
+// getCustomerName :: PersonWithCart -> String
+// getCustomerName = (person) => where (person) {
+//   ({name, ...rest}) => name
+// }
+
+
+
 main = () => {
   nice = { cool: 2, _7: "seven" }
   myRecord :: CoolRec

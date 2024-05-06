@@ -1,0 +1,1 @@
+We designed the language to be portable. It runs anywhere that JavaScript runs (both node and the browser) as well as in LLVM targets (which allows it to be really fast).
