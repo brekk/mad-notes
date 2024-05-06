@@ -1,0 +1,89 @@
+Our current offering was written for Vim, but we're planning to migrate this to Neovim in the future and this document caters to the latter. If you feel like contributing to this effort, please get in touch!
+## Vim Plugin
+
+Currently we have a [vim plugin](https://github.com/madlib-lang/vim-madlib) which you can install with your favorite plugin manager, e.g. `vim-plug`:
+
+```vimscript
+Plug 'madlib-lang/vim-madlib'
+```
+
+## Language Server
+
+We have a [[madlib lsp|language server]] which provides live updates inline. In order to take advantage of this, here's a small Lua snippet:
+
+```vimscript
+" Automagically use the Madlib LSP (language server protocol)
+lua << EOF
+ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.mad" },
+    callback = function()
+      vim.lsp.start({
+        name = "madlib",
+        cmd = { "madlib", "lsp" },
+        root_dir = vim.fs.dirname(vim.fs.find({ "madlib.json" }, { upward = true })[1]),
+      })
+    end,
+  })
+EOF
+```
+
+## Automatic formatting
+
+Madlib ships with an [[madlib format|automatic code formatter]] but this VimScript snippet will run it on save:
+
+```vimscript
+function! MadlibFormat()
+  let l:view = winsaveview()
+  exec "%! xargs -J{} -0 madlib format --text {}"
+  if v:shell_error != 0
+    undo
+  endif
+  call winrestview(l:view)
+endfunction
+
+autocmd BufWritePre *.mad call MadlibFormat()
+```
+## Test Coverage
+
+If you're interested in providing inline code coverage after [[madlib test|testing]], currently we delegate this to [Plenary](https://github.com/nvim-lua/plenary.nvim). 
+
+Firstly, add these plugins:
+
+```vimrc
+Plug 'nvim-lua/plenary.nvim'
+Plug 'andythigpen/nvim-coverage'
+```
+
+And this configuration:
+
+```vimscript
+lua << EOF
+local M = {}
+
+local Path = require("plenary.path")
+local common = require("coverage.languages.common")
+local config = require("coverage.config")
+local util = require("coverage.util")
+
+--- Returns a list of signs to be placed.
+M.sign_list = common.sign_list
+
+--- Returns a summary report.
+M.summary = common.summary
+
+--- Loads a coverage report.
+-- @param callback called with results of the coverage report
+M.load = function(callback)
+    local madlib_config = config.opts.lang.madlib
+    local p = Path:new(madlib_config.coverage_file)
+    if not p:exists() then
+        vim.notify("No coverage file exists.", vim.log.levels.INFO)
+        return
+    end
+
+    callback(util.lcov_to_table(p))
+end
+
+return M
+EOF
+```
