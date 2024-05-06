@@ -1,0 +1,17 @@
+import IO from "IO"
+import String from "String"
+
+
+
+say :: String -> String -> String
+say = (word, subject) => word ++ " " ++ subject
+
+main = () => {
+  pipe(
+    map(say("hello")),
+    String.join(", "),
+    say($, "!"),
+    say("madlib says:"),
+    IO.putLine,
+  )(["world", "there", "developer"])
+}

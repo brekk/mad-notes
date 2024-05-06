@@ -1,3 +1,10 @@
+---
+tags:
+  - fundamentals
+  - literals
+  - curry
+  - composition
+---
 ## Installation
 
 There are a few ways to [[Installation|install Madlib]], but the easiest is to install it via [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
@@ -140,6 +147,7 @@ In Madlib, we call our standard library _Prelude_ (a name taken from Haskell). W
 As you can see, functions are invoked by passing them parameters within parentheses. We've also assigned some of these results to variables (`x`, `y`, `z`) and we've shown that the REPL will remember these values in memory.
 
 We'll also try playing with a few of the functions defined in [List](https://github.com/madlib-lang/madlib/blob/master/prelude/__internal__/List.mad). Again, this isn't comprehensive but will give a sense of how they work:
+
 ```mad
 > import List from "List"
 > List.range(0, 10)
@@ -450,24 +458,10 @@ NB: If you try to print `x` without turning it into a String first via `String.j
 ─────╯
 ```
 
-This is most easily worked around by calling `show` first, like `IO.putLine(show(x))` — We won't go into too much detail for the purposes of keeping this document reasonably short, but `show` is a useful and semi-magical function which coerces values into Strings.
+This is most easily worked around by calling `show` first, like `IO.putLine(show(x))` — We won't go into too much detail for the purposes of keeping this document reasonably short, but `show` is a useful and [[Show|semi-magical function]] which coerces values into Strings.
 ### Challenge:
 
-Given the code we started with (and taking [[String]] + [[List]] from Prelude), how can we change our `main` function so that we print this sentence: `"madlib says: hello world, hello there, hello developer!"` _without_ changing our `say` implementation and only changing our piped composition in `main`?
+In order to test our understanding and comprehension, here's a small challenge: [[Say Anything, Say Many Things]]
+### Solution:
 
-```mad
-import IO from "IO"
-import String from "String"
-import List from "List"
-
-say :: String -> String -> String
-say = (word, subject) => word ++ " " ++ subject
-
-main = () => {
-  pipe(
-    say("hello"),
-    IO.putLine
-  )("world")
-}
-```
-
+See a possible solution to the challenge [[Solution - Say Anything, Say Many Things|here]]

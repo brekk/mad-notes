@@ -9,7 +9,7 @@ tags:
 
 ## Portability
 
-Code _should_ be written to be portable across all-targets by default:
+Code _should_ be written to be [[Portability|portable]] across all-targets by default:
 - JS / web code uses `#iftarget js`
 - LLVM code uses `#iftarget llvm`
 - This may vary based upon intent — but all core Madlib code should have parity across both targets
