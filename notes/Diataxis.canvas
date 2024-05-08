@@ -5,7 +5,7 @@
 		{"id":"8d3be054b6bdb565","type":"text","text":"Explanation\n\"Why is Madlib like this?\"","x":-340,"y":-40,"width":280,"height":60,"color":"6"},
 		{"id":"7eddaa9f479f830f","type":"text","text":"Reference\n\"What is X in Madlib?\"","x":60,"y":-40,"width":280,"height":60,"color":"5"},
 		{"id":"44f4e0cdc4f6dea0","type":"file","file":"How-To Guides/Coming From JavaScript.md","x":604,"y":-520,"width":400,"height":400,"color":"4"},
-		{"id":"5cbcd53cdab5b97a","type":"file","file":"How-To Guides/Getting Started.md","x":60,"y":-720,"width":400,"height":400,"color":"4"},
+		{"id":"5cbcd53cdab5b97a","type":"file","file":"How-To Guides/01 - Hello mad, mad world.md","x":60,"y":-720,"width":400,"height":400,"color":"4"},
 		{"id":"d0fd5da18e8bae54","x":-460,"y":-720,"width":400,"height":400,"color":"1","type":"file","file":"Tutorials/Challenges/Say Anything, Say Many Things.md"}
 	],
 	"edges":[

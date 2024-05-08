@@ -1,6 +1,8 @@
 ---
 aliases: 
-tags: []
+tags:
+  - development
+  - javascript
 ---
 For developers coming to Madlib from JavaScript, there are a few notable differences one should be aware of.
 

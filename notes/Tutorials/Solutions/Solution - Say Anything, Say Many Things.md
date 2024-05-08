@@ -22,4 +22,4 @@ main = () => {
 }
 ```
 
-If there's anything that you're unfamiliar with, you can see the [[Getting Started]] guide here.
+If there's anything that you're unfamiliar with, you can see the [[01 - Hello mad, mad world]] guide here.
