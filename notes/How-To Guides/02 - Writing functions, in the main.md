@@ -1,3 +1,10 @@
+---
+tags:
+  - functions
+  - curry
+  - composition
+  - guide
+---
 In the [[01 - Hello mad, mad world|previous guide]] we talked through the basics of [[01 - Hello mad, mad world#Installation|installing]] Madlib and running the [[01 - Hello mad, mad world#REPL|REPL]].
 
 In this document we'll talk through writing our own `main` function, which will allow us to save and execute code outside of the REPL.

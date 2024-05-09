@@ -2,8 +2,8 @@
 tags:
   - fundamentals
   - literals
-  - curry
-  - composition
+  - logic
+  - guide
 ---
 ## Installation
 
@@ -39,7 +39,7 @@ Available commands:
 >
 ```
 
-Here are some simple expressions you can start to play with in the REPL before we set up a more serious [[03 - Developmental Growth|programming environment]].
+Here are some simple expressions you can start to play with in the REPL before we set up a more serious [[03 - The March of IDEs|programming environment]].
 
 ### Basic arithmetic
 

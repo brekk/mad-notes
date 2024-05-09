@@ -1,7 +1,7 @@
 ## Import not found
 
-![[Screenshot 2024-05-07 at 10.24.48 AM.png]]
+![[error-import-not-found.png]]
 
 ## Unknown type
 
-![[Screenshot 2024-05-07 at 10.31.31 AM.png]]
+![[error-unknown-type.png]]

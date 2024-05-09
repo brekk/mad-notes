@@ -1,3 +1,13 @@
+---
+tags:
+  - ide
+  - development
+  - library
+  - pattern-matching
+  - import
+  - export
+  - guide
+---
 [[02 - Writing functions, in the main|Previously]] we talked through the basics of running Madlib in a [[01 - Hello mad, mad world#REPL|REPL]] or your favorite [[02 - Writing functions, in the main#Defining functions|text editor]].
 
 In this document we'll talk about:
@@ -219,6 +229,13 @@ But are you happy? false
 ```
 
 You can change this by changing the code, or you can change this by learning more about Madlib!
+### Challenge:
+
+In order to test our understanding and comprehension of what we've learned in this guide, here's a small challenge: 
+### Solution:
+
+See a possible solution to the challenge
+
 ## Summary
 - Setting up an [[03 - The March of IDEs#Integrated Development Environment (IDE)|IDE]]
 - Creating a [[03 - The March of IDEs#The new new|new Madlib project]] using `madlib new`

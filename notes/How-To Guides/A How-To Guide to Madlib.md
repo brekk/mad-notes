@@ -1,3 +1,9 @@
+---
+tags:
+  - development
+  - guide
+  - walkthrough
+---
 ```dataview
 LIST rows.item.text
 FLATTEN file.lists as item
