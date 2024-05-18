@@ -8,7 +8,7 @@ tags:
   - export
   - guide
 ---
-[[02 - Writing functions, in the main|Previously]] we talked through the basics of running Madlib in a [[01 - Hello mad, mad world#REPL|REPL]] or your favorite [[02 - Writing functions, in the main#Defining functions|text editor]].
+[[04 - Writing functions, in the main|Previously]] we talked through the basics of running Madlib in a [[01 - Hello mad, mad world#REPL|REPL]] or your favorite [[04 - Writing functions, in the main#Defining functions|text editor]].
 
 In this document we'll talk about:
 - setting up an integrated development environment (IDE)
@@ -26,7 +26,7 @@ See [[03.2 - Developing Madlib in VS Code|this document]] to learn more about se
 
 ## Building a library
 
-In [[02 - Writing functions, in the main|the previous guide]], we had this sample code:
+In [[04 - Writing functions, in the main|the previous guide]], we had this sample code:
 
 ```mad
 import IO from "IO"
@@ -237,10 +237,10 @@ In order to test our understanding and comprehension of what we've learned in th
 See a possible solution to the challenge
 
 ## Summary
-- Setting up an [[03 - The March of IDEs#Integrated Development Environment (IDE)|IDE]]
-- Creating a [[03 - The March of IDEs#The new new|new Madlib project]] using `madlib new`
-- Exploring [[03 - The March of IDEs#madlib.json|the]] [[03 - The March of IDEs#README.md|files]] [[03 - The March of IDEs#src/Main.mad|which]] are created by `madlib new`
-- [[03 - The March of IDEs#src/Person.mad|Many common errors and warnings]] that Madlib may throw at you
-- Defining a [[03 - The March of IDEs#Some type of Mood|custom type]]
-- Using [[03 - The March of IDEs#A moody function|pattern matching]] to destructure a custom type
-- Running a [[03 - The March of IDEs#Vibe check|main]] file which leverages a library
+- Setting up an [[05 - The March of IDEs#Integrated Development Environment (IDE)|IDE]]
+- Creating a [[05 - The March of IDEs#The new new|new Madlib project]] using `madlib new`
+- Exploring [[05 - The March of IDEs#madlib.json|the]] [[05 - The March of IDEs#README.md|files]] [[05 - The March of IDEs#src/Main.mad|which]] are created by `madlib new`
+- [[05 - The March of IDEs#src/Person.mad|Many common errors and warnings]] that Madlib may throw at you
+- Defining a [[05 - The March of IDEs#Some type of Mood|custom type]]
+- Using [[05 - The March of IDEs#A moody function|pattern matching]] to destructure a custom type
+- Running a [[05 - The March of IDEs#Vibe check|main]] file which leverages a library

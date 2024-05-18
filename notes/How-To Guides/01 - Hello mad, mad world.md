@@ -39,7 +39,7 @@ Available commands:
 >
 ```
 
-Here are some simple expressions you can start to play with in the REPL before we set up a more serious [[03 - The March of IDEs|programming environment]].
+Here are some simple expressions you can start to play with in the REPL before we set up a more serious [[05 - The March of IDEs|programming environment]].
 
 ### Basic arithmetic
 
@@ -160,8 +160,7 @@ We'll also try playing with a few of the functions defined in [List](https://git
 ```
 
 
-## Summary
-
+##### Summary
 In this document, we've discussed:
 - [[01 - Hello mad, mad world#Installation|Installing]] Madlib
 - Using the [[01 - Hello mad, mad world#REPL|REPL]]

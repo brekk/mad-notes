@@ -1,3 +1,7 @@
+---
+tags:
+  - challenge
+---
 Given the code sample [[01 - Hello mad, mad world|we started with]] (and taking [[String]] from Prelude), how can we change our `main` function so that we print this sentence: `"madlib says: hello world, hello there, hello developer !"` _without_ changing our `say` implementation and only changing our piped composition in `main`?
 
 ```mad

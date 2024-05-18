@@ -1,37 +1,7 @@
-[[02 - Writing functions, in the main|Previously]] we talked through the basics of running Madlib in a [[01 - Hello mad, mad world#REPL|REPL]] or your favorite [[02 - Writing functions, in the main#Defining functions|text editor]].
-
-In this document we'll talk about:
-- setting up an integrated development environment (IDE)
-- the module segmentation Madlib uses
-
-## Integrated Development Environment (IDE)
-### Vim / Neovim
-
-See [[03.1 - Developing Madlib in Neovim|this document]] to learn more about setting up a Madlib environment in Neovim.
-### VS Code
-
-See [[03.2 - Developing Madlib in VS Code|this document]] to learn more about setting up a Madlib environment in VS Code.
-
-## Building a library
-
-In [[02 - Writing functions, in the main|the previous guide]], we had this sample code:
-
-```mad
-import IO from "IO"
-
-say :: String -> String -> String
-say = (word, subject) => word ++ " " ++ subject
-
-main = () => {
-  pipe(
-    say("hello"),
-    IO.putLine
-  )("world")
-}
-```
-
-This was an all-in-one main file written in order to allow us to jump into Madlib development simply and quickly — here we're going to add a few wrinkles which allow us to segment our code into modular parts.
-
+---
+tags:
+  - guide
+---
 Firstly, let's set up a new codebase with [[madlib new]] — this will allow us to set up a few files automatically. For the porpoises of this guide, let's call this "the-garden". Start this process off by running `madlib new the-garden`:
 
 ```sh
@@ -73,7 +43,7 @@ We can use this file to articulate upstream dependencies and a few other details
 
 ### Source files
 
-In the [[02 - Writing functions, in the main|previous guide]], we were just running things directly via `madlib run`. In this project, we're going to keep our source files in the `src` folder. This isn't strictly necessary but gives us some structure as we flesh out this library — by convention we've chosen this pattern for Madlib libraries.
+In the [[04 - Writing functions, in the main|previous guide]], we were just running things directly via `madlib run`. In this project, we're going to keep our source files in the `src` folder. This isn't strictly necessary but gives us some structure as we flesh out this library — by convention we've chosen this pattern for Madlib libraries.
 
 Let's create a few files in `/src` and then we'll discuss them in depth further below
 
@@ -184,3 +154,4 @@ If you'd like, we can import this within the [[01 - Hello mad, mad world#REPL|RE
 > count()
 1 :: Short
 ```
+

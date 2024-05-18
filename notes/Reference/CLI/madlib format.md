@@ -2,9 +2,12 @@
 tags:
   - cli
 ---
+##### Synopsis
+- Madlib provides an automatic code formatter so you can focus more time on writing code and less time quibbling about how things look. Learn more about setting up an integrated development environment [[05 - The March of IDEs#Integrated Development Environment (IDE)|here]].
+
 ## Sort of important
 
-The auto-formatter will sort import statements based on a few criteria and imported values alphabetically. This is done to eschew what could otherwise be [bike-shed problems](https://en.wikipedia.org/wiki/Law_of_triviality).
+The auto-formatter will sort import statements based on a few criteria and imported values alphabetically. This is done [[Avoid needless argument|to eschew]] what could otherwise be [bike-shed problems](https://en.wikipedia.org/wiki/Law_of_triviality).
 
 ### The Order of Imports
 

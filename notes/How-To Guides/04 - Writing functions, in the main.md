@@ -317,8 +317,8 @@ In order to test our understanding and comprehension, here's a small challenge: 
 See a possible solution to the challenge [[Solution - Say Anything, Say Many Things|here]]
 
 ## Summary
-- Function [[02 - Writing functions, in the main#Defining functions|definitions]]
-- Defining and running a [[02 - Writing functions, in the main#A main function|main]] function
-- [[02 - Writing functions, in the main#Partial application and curry|Curried]] functions and their (partial) [[02 - Writing functions, in the main#Function application operator|applications]]
-- [[02 - Writing functions, in the main#Composition|Composing]] functions
-- Applying functions to a List with [[02 - Writing functions, in the main#Applying a function to a List|map]]
+- Function [[04 - Writing functions, in the main#Defining functions|definitions]]
+- Defining and running a [[04 - Writing functions, in the main#A main function|main]] function
+- [[04 - Writing functions, in the main#Partial application and curry|Curried]] functions and their (partial) [[04 - Writing functions, in the main#Function application operator|applications]]
+- [[04 - Writing functions, in the main#Composition|Composing]] functions
+- Applying functions to a List with [[04 - Writing functions, in the main#Applying a function to a List|map]]
