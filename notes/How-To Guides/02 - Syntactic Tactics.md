@@ -32,7 +32,7 @@ div :: Integer -> Integer -> Float
 div = (n, d) => n / d
 ```
 
- This is discussed further in [[06 - Developmental Growth|a future guide]].
+ This is discussed more in [[06 - Developmental Growth|a future guide]].
 
 ## Conditionals
 

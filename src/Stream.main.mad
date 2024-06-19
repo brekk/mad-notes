@@ -1,0 +1,47 @@
+import Fn from "Function"
+import IO from "IO"
+import List from "List"
+import Stream from "Stream"
+import { Wish, fulfill } from "Wish"
+
+
+
+type Event e a = StreamEvent(a) | StreamError(e) | StreamEnd
+
+main = (argv) => {
+  pipe(
+    Stream.take(10),
+    (stream) => {
+      events = []
+      return Wish(
+        (bad, good) => {
+          push = (x) => List.append(x, events)
+          handleErrors = (e) => {
+            events := push(StreamError(e))
+            bad(events)
+          }
+          handleEvents = (v) => {
+            IO.pTrace("Event!", v)
+            events := push(StreamEvent(v))
+          }
+          handleEnd = () => {
+            events := push(StreamEnd)
+            good(events)
+          }
+          Stream.subscribe(handleErrors, handleEvents, handleEnd)(stream)
+          return () => {}
+        },
+      )
+    },
+    fulfill(
+      pipe(
+        IO.pTrace("bad"),
+        Fn.noop,
+      ),
+      pipe(
+        IO.pTrace("good"),
+        Fn.noop,
+      ),
+    ),
+  )(Stream.interval(1000))
+}

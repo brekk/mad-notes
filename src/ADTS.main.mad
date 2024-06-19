@@ -1,0 +1,95 @@
+import {} from "Applicative"
+import IO from "IO"
+import {} from "Monad"
+import String from "String"
+
+
+
+export alias EntityBase = { age :: Short, name :: String }
+
+// export type Entity y x = Living(x) | Dormant(y) | Dead
+export type Entity x y = Dormant(x) | Living(y) | Dead
+
+instance Functor (Entity e) {
+  map = (f) => where {
+    Living(a) =>
+      Living(f(a))
+
+    Dormant(e) =>
+      Dormant(e)
+
+    Dead =>
+      Dead
+  }
+}
+
+instance Applicative (Entity e) {
+  ap = (mf, m) => where(mf) {
+    Dormant(e) =>
+      Dormant(e)
+
+    Living(f) =>
+      map(f, m)
+
+    Dead =>
+      Dead
+  }
+
+  pure = Living
+}
+
+instance Monad (Entity e) {
+  chain = (f) => where {
+    Living(a) =>
+      f(a)
+
+    Dormant(e) =>
+      Dormant(e)
+
+    Dead =>
+      Dead
+  }
+
+  of = pure
+}
+
+
+instance Bifunctor Entity {
+  bimap = (leftF, rightF) => where {
+    Living(a) =>
+      Living(rightF(a))
+
+    Dormant(e) =>
+      Dormant(leftF(e))
+
+    Dead =>
+      Dead
+  }
+
+  mapFirst = mapDormant
+
+  mapSecond = map
+}
+
+
+instance Semigroup (Entity e a) {
+  assoc = (a, b) => where(#[a, b]) {
+    #[Dormant(_), _b] =>
+      _b
+
+    #[_a, _] =>
+      _a
+  }
+}
+
+mapDormant :: (d -> e) -> Entity d f -> Entity e f
+mapDormant = (f, m) => where(m) {
+  Dormant(raw) =>
+    Dormant(f(raw))
+
+  Living(a) =>
+    Living(a)
+
+  Dead =>
+    Dead
+}

@@ -13,7 +13,7 @@ Our standard library (the functionality available without a third-party library)
 
 ```dataview
 LIST L.text
-FROM "Data Types"
+FROM "Reference/Data Types"
 FLATTEN file.lists AS L
 WHERE meta(L.section).subpath = "Synopsis"
 SORT file.name
